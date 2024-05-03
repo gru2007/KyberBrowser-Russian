@@ -58,8 +58,8 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="20"/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Text="Search:" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="16" Margin="1 0 0 0" TextWrapping="NoWrap" VerticalAlignment="Center"/>
-                        
+                        <TextBlock FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="16" Margin="1,0,0,1" TextWrapping="NoWrap" VerticalAlignment="Bottom"><Run Language="ru-ru" Text="Поиск"/><Run Text=":"/></TextBlock>
+
                         <TextBox x:Name="FilterTextBox" Margin="3 0 0 0" Grid.Column="1" TextChanged="FilterTextBox_TextChanged" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="16" BorderThickness="1" ScrollViewer.VerticalScrollBarVisibility="Hidden"/>
                         <Button x:Name="FilterClearButton" Grid.Column="1" Width="20" HorizontalAlignment="Right" VerticalAlignment="Stretch" Click="FilterClearButton_Click" Content="&#xE106;" FontFamily="Segoe MDL2 Assets" FontSize="8" >
                             <Button.Style>
@@ -90,7 +90,7 @@
                                 </ControlTemplate>
                             </Button.Template>
                         </Button>
-                        
+
                         <Button x:Name="RefreshButton" Grid.Column="2" Margin="0" HorizontalAlignment="Right" Height="20" Width="20" VerticalAlignment="Top" Click="RefreshButton_Click" ToolTip="Refresh Server List">
                             <Button.Content>
                                 <Image Source="/Resources/refresh.png" Width="16" Margin="4 2 0 0"/>
@@ -235,14 +235,14 @@
                                 <Viewbox Height="33" HorizontalAlignment="Left" StretchDirection="DownOnly" Stretch="Uniform">
                                     <TextBlock x:Name="InfoName" Text="Server" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="28" TextWrapping="NoWrap"/>
                                 </Viewbox>
-                                
+
                                 <Grid>
                                     <TextBlock x:Name="InfoHosted" Text="Hosted by User" FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT" FontSize="15" Foreground="#FFA3A3A3" TextWrapping="NoWrap" VerticalAlignment="Bottom"/>
                                     <TextBlock x:Name="InfoTime" Text="1m" FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT" FontSize="12" Foreground="#FFA3A3A3" HorizontalAlignment="Right" VerticalAlignment="Bottom" TextWrapping="NoWrap" />
                                 </Grid>
                                 <Separator Margin="-1 2 -1 8"/>
                                 <StackPanel x:Name="DescrSection">
-                                    <TextBox x:Name="InfoDescription" Text="Description" FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT" FontSize="15" Foreground="#FFA3A3A3" Background="Transparent" TextWrapping="Wrap" BorderThickness="0" IsReadOnly="True"/>
+                                    <TextBox x:Name="InfoDescription" Text="Описание" FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT" FontSize="15" Foreground="#FFA3A3A3" Background="Transparent" TextWrapping="Wrap" BorderThickness="0" IsReadOnly="True"/>
                                     <Separator x:Name="InfoDescTagSeparator" Margin="1" Opacity="0"/>
                                     <ListBox x:Name="InfoTags" BorderThickness="0" Background="Transparent" ScrollViewer.HorizontalScrollBarVisibility="Hidden" MaxHeight="100">
                                         <ListBox.ItemsPanel>
@@ -280,7 +280,7 @@
                                 </StackPanel>
 
                                 <StackPanel x:Name="InfoReqModSection">
-                                    <TextBlock Text="Required Mods:" FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT" FontSize="15" Foreground="#FFA3A3A3" TextWrapping="Wrap"/>
+                                    <TextBlock Text="Необходимые моды:" FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT" FontSize="15" Foreground="#FFA3A3A3" TextWrapping="Wrap"/>
                                     <ListBox x:Name="InfoRequiredMods" BorderThickness="0" Background="Transparent" ScrollViewer.HorizontalScrollBarVisibility="Hidden" MaxHeight="230">
                                         <ListBox.ItemTemplate>
                                             <DataTemplate>
@@ -289,7 +289,7 @@
                                                         <TextBlock x:Name="ReqModText" Text="{Binding Name}" ToolTip="{Binding Name}" FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT" FontSize="14" Foreground="#FFA3A3A3" TextWrapping="NoWrap"/>
                                                         <Image x:Name="ReqModDL" Source="/Resources/download.png" Width="16" Margin="1 0 0 0" Opacity="0.85"/>
                                                     </StackPanel>
-                                                    
+
                                                     <Button x:Name="ReqModButton" ToolTip="{Binding Name}" Click="ReqModItem_Click" Opacity="0" Visibility="Visible"/>
                                                 </Grid>
 
@@ -339,21 +339,21 @@
                                 </StackPanel>
 
                                 <StackPanel x:Name="FactionSelectSection">
-                                    <TextBlock Text="Faction:" FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT" FontSize="15" Foreground="#FFA3A3A3" TextWrapping="Wrap"/>
+                                    <TextBlock Text="Фракция:" FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT" FontSize="15" Foreground="#FFA3A3A3" TextWrapping="Wrap"/>
                                     <Grid Height="25">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="*"/>
                                             <ColumnDefinition Width="4"/>
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
-                                        <RadioButton x:Name="LightFactionRadio" Grid.Column="0" Content="Light" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="16" IsChecked="True"/>
-                                        <RadioButton Grid.Column="2" Content="Dark" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="16" />
+                                        <RadioButton x:Name="LightFactionRadio" Grid.Column="0" Content="Светлая" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="16" IsChecked="True"/>
+                                        <RadioButton Grid.Column="2" Content="Темная" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="16" />
                                     </Grid>
                                     <Separator Margin="-1 8 -1 8"/>
                                 </StackPanel>
 
                                 <StackPanel x:Name="InfoPasswordSection">
-                                    <TextBlock Text="Password:" FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT" FontSize="15" Foreground="#FFA3A3A3" TextWrapping="Wrap"/>
+                                    <TextBlock Text="Пароль:" FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT" FontSize="15" Foreground="#FFA3A3A3" TextWrapping="Wrap"/>
                                     <TextBox x:Name="PasswordTextBox" Height="25" Margin="0 0 0 4" ToolTip="Password" VerticalAlignment="Top" VerticalContentAlignment="Center" FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT" FontSize="15" />
                                     <Separator Margin="-1 8 -1 8"/>
                                 </StackPanel>
@@ -384,7 +384,7 @@
                                             </Image>
                                         </Button.Content>
                                     </Button>
-                                    <Button Grid.Column="2" Content="PLAY" ToolTip="Launch Game" Height="40" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="18" Click="LaunchButton_Click"/>
+                                    <Button Grid.Column="2" Content="ИГРАТЬ" ToolTip="Launch Game" Height="40" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="18" Click="LaunchButton_Click"/>
                                     <Button Grid.Column="4" x:Name="LaunchFrostyButton" ToolTip="Select Server and Launch Frosty" Height="40" Click="LaunchFrostyButton_Click"  FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="14">
                                         <Button.Content>
                                             <Path Stretch="Uniform" Margin="4"
@@ -396,7 +396,7 @@
                             </StackPanel>
                         </Grid>
                         <Grid x:Name="EmptyInfoPane" Margin="12 8 12 12" Visibility="Visible">
-                            <TextBlock Text="Select A Server..." FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="28" TextWrapping="NoWrap"/>
+                            <TextBlock FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="28" TextWrapping="NoWrap"><Run Language="ru-ru" Text="Выберите сервер..."/><LineBreak/><Run Language="ru-ru"/></TextBlock>
                         </Grid>
                     </Grid>
                 </Border>

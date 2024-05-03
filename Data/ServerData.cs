@@ -17,7 +17,7 @@ namespace KyberBrowser {
                     title = title.Replace(match.Value, "");
 
                 if (String.IsNullOrWhiteSpace(title))
-                    title = "Server";
+                    title = "Сервер";
 
                 return title.Trim();
             }
@@ -41,9 +41,9 @@ namespace KyberBrowser {
         public string Subtitle {
             get {
                 if (!App.Maps.TryGetValue(Map, out string mapName))
-                    mapName = "Custom Mode";
+                    mapName = "Свой режим";
 
-                string modeName = "Custom Mode";
+                string modeName = "Свой режим";
                 if (App.Modes.TryGetValue(Mode, out ModeData mode))
                     modeName = mode.Name;
 

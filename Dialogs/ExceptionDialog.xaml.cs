@@ -39,5 +39,10 @@ namespace KyberBrowser.Dialogs {
                 window.ShowDialog();
             });
         }
+
+        private void CopyButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

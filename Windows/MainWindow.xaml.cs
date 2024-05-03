@@ -111,12 +111,14 @@ namespace KyberBrowser {
             InfoName.ToolTip = server.Title;
 
             if (server.Official)
-                InfoHosted.Text = $"Official Server";
+                InfoHosted.Text = $"Официальный сервер";
+            else if (server.Host == "gru20077")
+                InfoHosted.Text = $"Официальный сервер Storm of The Galaxy";
             else
-                InfoHosted.Text = $"Hosted by {server.Host}";
+                InfoHosted.Text = $"Создан {server.Host}";
 
-            InfoTime.Text = server.StartedAt.Replace(" ago", "");
-            InfoTime.ToolTip = "Server started " + server.StartedAt;
+            InfoTime.Text = server.StartedAt.Replace(" назад", "");
+            InfoTime.ToolTip = "Запущен " + server.StartedAt;
 
             InfoDescription.Text = server.Description.Trim();
 
@@ -178,7 +180,7 @@ namespace KyberBrowser {
 
             if (!response.IsSuccessStatusCode) {
                 string message = JsonDocument.Parse(await response.Content.ReadAsStringAsync()).RootElement.GetProperty("message").GetString();
-                MessageBoxDialog.Show("Unable To Select Server:\n" + message, this.Title, MessageBoxButton.OK, DialogSound.Error);
+                MessageBoxDialog.Show("Невозможно выбрать сервер:\n" + message, this.Title, MessageBoxButton.OK, DialogSound.Error);
                 return false;
             }
             return true;
@@ -253,7 +255,7 @@ namespace KyberBrowser {
                         });
                     }
                     catch (Exception e) {
-                        MessageBoxDialog.Show("Unable To Setup DatapathFix:\n" + e.Message + "\nAttempting to Launch Game...", Title, MessageBoxButton.OK, DialogSound.Error);
+                        MessageBoxDialog.Show("Невозможно установить DatapathFix:\n" + e.Message + "\nПытаюсь запустить игру...", Title, MessageBoxButton.OK, DialogSound.Error);
 
                         // Launch as Normal
                         Process.Start(new ProcessStartInfo(Config.Settings.BF2Path, args) {
@@ -361,7 +363,7 @@ namespace KyberBrowser {
                     injectedTo.Add(game[0].Id);
                 }
                 catch (Exception e) {
-                    MessageBoxDialog.Show("Unable To Inject Kyber:\n" + e.Message, this.Title, MessageBoxButton.OK, DialogSound.Error);
+                    MessageBoxDialog.Show("Невозможно инжектнуть Kyber:\n" + e.Message, this.Title, MessageBoxButton.OK, DialogSound.Error);
                 }
             }
         }

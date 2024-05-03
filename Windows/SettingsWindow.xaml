@@ -38,7 +38,7 @@
                 </Grid.RowDefinitions>
 
                 <StackPanel Grid.Row="0" Orientation="Vertical">
-                    <TextBlock Text="Battlefront II Location" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="18" TextAlignment="Left"/>
+                    <TextBlock Text="Местоположение BattleFront II" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="18" TextAlignment="Left"/>
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
@@ -55,7 +55,7 @@
 
 
                     <Separator Opacity="0" Height="8"/>
-                    <TextBlock Text="Frosty Location" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="18" TextAlignment="Left"/>
+                    <TextBlock Text="Местоположение Frosty" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="18" TextAlignment="Left"/>
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
@@ -73,21 +73,21 @@
 
                 <StackPanel Grid.Row="1" Orientation="Vertical">
                     <Separator Opacity="0" Height="8"/>
-                    <TextBlock Text="Release Channel" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="18" TextAlignment="Left"/>
+                    <TextBlock Text="Канал обновлений Kyber" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="18" TextAlignment="Left"/>
                     <TextBox x:Name="DLLChannel" Height="25" Text="{Binding Path=(local:Config.KyberChannel), Mode=TwoWay}" VerticalAlignment="Top" VerticalContentAlignment="Center" FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT" FontSize="15" />
                 </StackPanel>
 
                 <StackPanel Grid.Row="2" Orientation="Vertical">
                     <CheckBox  Margin="0 12 0 0" VerticalAlignment="Center" IsChecked="{Binding Path=(local:Config.UpdateChecker), Mode=TwoWay}">
-                        <TextBlock Text="Check for Updates" Margin="-4,0" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="18" TextAlignment="Left"/>
+                        <TextBlock Text="Проверять обновления" Margin="-4,0" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="18" TextAlignment="Left"/>
                     </CheckBox>
 
                     <CheckBox  Margin="0 12 0 0" VerticalAlignment="Center" IsChecked="{Binding Path=(local:Config.RunAsAdmin), Mode=TwoWay}">
-                        <TextBlock Text="Require Administrator" Margin="-4,0" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="18" TextAlignment="Left"/>
+                        <TextBlock Text="Требовать права Администратора" Margin="-4,0" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="18" TextAlignment="Left"/>
                     </CheckBox>
 
                     <CheckBox  Margin="0 12 0 0" VerticalAlignment="Center" IsChecked="{Binding Path=(local:Config.HostConfigStartup), Mode=TwoWay}">
-                        <TextBlock Text="Load Hosting Config on Startup" Margin="-4,0" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="18" TextAlignment="Left"/>
+                        <TextBlock Text="Загрузить конфигурацию хоста при запуске" Margin="-4,0" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="18" TextAlignment="Left"/>
                     </CheckBox>
 
                     <!--<CheckBox  Margin="0 12 0 0" VerticalAlignment="Center" IsChecked="{Binding Path=(local:Config.DisableEasterEggs), Mode=TwoWay}">
@@ -96,9 +96,9 @@
                 </StackPanel>
 
                 <StackPanel Grid.Row="3" Orientation="Vertical" Margin="0 10 0 0">
-                    
-                        <StackPanel>
-                            <TextBlock Text="Launch Fix:" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="18"/>
+
+                    <StackPanel>
+                        <TextBlock Text="Фикс Запуска:" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="18"/>
                         <Border Background="#bb000000" BorderThickness="1" BorderBrush="#6fffffff">
                             <Grid Margin="4" Height="26">
                                 <Grid.ColumnDefinitions>
@@ -108,7 +108,7 @@
                                     <ColumnDefinition Width="4"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
-                                <RadioButton Grid.Column="0" x:Name="LFixNone" Content="None" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="16" IsChecked="True"/>
+                                <RadioButton Grid.Column="0" x:Name="LFixNone" Content="Нет" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="16" IsChecked="True"/>
                                 <RadioButton Grid.Column="2" x:Name="LFixSteam" Content="SteamFix" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="16"/>
                                 <RadioButton Grid.Column="4" x:Name="LFixDP" Content="DatapathFix" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="16"/>
                             </Grid>
@@ -129,9 +129,9 @@
                         <ColumnDefinition Width="5"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" x:Name="ResetSettingsButton" Content="Reset Settings" Padding="10,0" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="16"/>
-                    <Button Grid.Column="2" x:Name="WinDefButton" Content="Defender Exclusion" Padding="10,0" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="16"/>
-                    <Button Grid.Column="4" x:Name="RedownloadButton" Content="Redownload DLL" Padding="10,0" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="16" Click="RedownloadButton_Click"/>
+                    <Button Grid.Column="0" x:Name="ResetSettingsButton" Content="Сбросить" Padding="10,0" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="16" Margin="0,0,50,0"/>
+                    <Button x:Name="WinDefButton" Content="+Исключение Фаервола" Padding="10,0" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="16" Click="WinDefButton_Click" Grid.ColumnSpan="3" Margin="101,0,0,0"/>
+                    <Button Grid.Column="4" x:Name="RedownloadButton" Content="Перекачать DLL" Padding="10,0" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="16" Click="RedownloadButton_Click"/>
                 </Grid>
                 <Separator Opacity="1" Margin="0 10"/>
                 <Grid HorizontalAlignment="Stretch" Grid.Row="3" Height="40">
@@ -141,12 +141,12 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
-                    <ComboBox Grid.Column="0" x:Name="ModDataComboBox" DisplayMemberPath="Name" ToolTip="Select ModData" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" Padding="6 0 0 0" FontSize="16" VerticalContentAlignment="Center" Foreground="#FFA3A3A3"/>
-                    <Button Grid.Column="2" x:Name="InitfsFixButton" Content="Install InitfsFix" ToolTip="Installs InitfsFix (Invisibility Fix) to selected ModData" Padding="10,0" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="16"/>
+                    <ComboBox Grid.Column="0" x:Name="ModDataComboBox" DisplayMemberPath="Name" ToolTip="Select ModData" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" Padding="6 0 0 0" FontSize="16" VerticalContentAlignment="Center" Foreground="#FFA3A3A3" Margin="0,0,10,0"/>
+                    <Button x:Name="InitfsFixButton" Content="Установить InitfsFix" ToolTip="Installs InitfsFix (Invisibility Fix) to selected ModData" Padding="10,0" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="16" Grid.ColumnSpan="3" Margin="292,0,0,0"/>
                 </Grid>
             </StackPanel>
-            
-            
+
+
         </Grid>
     </Grid>
 </Window>

@@ -77,7 +77,7 @@ namespace KyberBrowser {
 
         private void RedownloadButton_Click(object sender, RoutedEventArgs e) {
             App.DownloadKyber();
-            MessageBoxDialog.Show("Kyber DLL has been redownloaded", "KyberBrowser", MessageBoxButton.OK, DialogSound.Notify);
+            MessageBoxDialog.Show("Kyber DLL перекачан", "KyberBrowser", MessageBoxButton.OK, DialogSound.Notify);
         }
 
         private void UpdateModDataComboBox() {
@@ -92,13 +92,13 @@ namespace KyberBrowser {
         }
 
         private void InstallInitfs() {
-            if (MessageBoxDialog.Show("Installing InitfsFix overwrites any custom Graphics changes\nyou may have made to initfs_Win32.\n\n[If you don't know what this means press OK]", "KyberBrowser", MessageBoxButton.OKCancel, DialogSound.Notify) == MessageBoxResult.Cancel)
+            if (MessageBoxDialog.Show("Установка InitfsFix перезаписывает все изменения Графики\nкоторые вы сделали в initfs_Win32.\n\n[Если вы не знаете, что это значит, нажмите ОК]", "KyberBrowser", MessageBoxButton.OKCancel, DialogSound.Notify) == MessageBoxResult.Cancel)
                 return;
 
 
             string initfsPath = Path.Combine(((DirectoryInfo)ModDataComboBox.SelectedItem).FullName, "Data", "initfs_Win32");
             if (!File.Exists(initfsPath)) {
-                MessageBoxDialog.Show($"InitfsFix has not been installed\n\\{((DirectoryInfo)ModDataComboBox.SelectedItem).Name}\\Data\\initfs_Win32 file not found", "KyberBrowser", MessageBoxButton.OK, DialogSound.Error);
+                MessageBoxDialog.Show($"InitfsFix не установлен\n\\{((DirectoryInfo)ModDataComboBox.SelectedItem).Name}\\Data\\initfs_Win32 не найден", "KyberBrowser", MessageBoxButton.OK, DialogSound.Error);
                 return;
             }
 
@@ -130,7 +130,7 @@ namespace KyberBrowser {
             };
             Process.Start(startInfo).WaitForExit();
 
-            MessageBoxDialog.Show("InitfsFix has been installed", "KyberBrowser", MessageBoxButton.OK, DialogSound.Notify);
+            MessageBoxDialog.Show("InitfsFix был установлен", "KyberBrowser", MessageBoxButton.OK, DialogSound.Notify);
 
             // Only delete the exe, just incase user wants to edit Graphics.lua
             File.Delete(initfsEditPath);
@@ -138,7 +138,7 @@ namespace KyberBrowser {
 
         private void FrostyOpenButton_Click(object sender, RoutedEventArgs e) {
             OpenFileDialog dialog = new() {
-                Title = "Select Frosty",
+                Title = "Выберите Frosty",
                 Filter = "Frosty Executable (*.exe) |*.exe",
                 FilterIndex = 2,
                 InitialDirectory = Path.GetDirectoryName(Config.Settings.FrostyPath),
@@ -153,7 +153,7 @@ namespace KyberBrowser {
 
         private void GameOpenButton_Click(object sender, RoutedEventArgs e) {
             OpenFileDialog dialog = new() {
-                Title = "Select STAR WARS Battlefront II",
+                Title = "Выберите STAR WARS Battlefront II",
                 Filter = "SWBF2 Executable (*.exe) |*.exe",
                 FilterIndex = 2,
                 InitialDirectory = Path.GetDirectoryName(Config.Settings.BF2Path),
@@ -174,6 +174,11 @@ namespace KyberBrowser {
 
             if (e.Key == Key.F12)
                 Process.Start("explorer.exe", $"/select, {Config.FilePath}");
+        }
+
+        private void WinDefButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

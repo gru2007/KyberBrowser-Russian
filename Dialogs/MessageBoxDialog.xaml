@@ -31,9 +31,9 @@
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="2">
                 <Button x:Name="OKButton" Content="OK" Width="82" HorizontalAlignment="Right" Margin="0,5,5,5" FontSize="15" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" />
-                <Button x:Name="YesButton" Content="Yes" Width="82" HorizontalAlignment="Right" Margin="0,5,5,5" FontSize="15" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium"/>
-                <Button x:Name="NoButton" Content="No" Width="82" HorizontalAlignment="Right" Margin="0,5,5,5" FontSize="15" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium"/>
-                <Button x:Name="CancelButton" Content="Cancel" Width="82" HorizontalAlignment="Right" Margin="0,5,5,5" FontSize="15" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium"/>
+                <Button x:Name="YesButton" Content="Да" Width="82" HorizontalAlignment="Right" Margin="0,5,5,5" FontSize="15" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium"/>
+                <Button x:Name="NoButton" Content="Нет" Width="82" HorizontalAlignment="Right" Margin="0,5,5,5" FontSize="15" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium"/>
+                <Button x:Name="CancelButton" Content="Отмена" Width="82" HorizontalAlignment="Right" Margin="0,5,5,5" FontSize="15" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium"/>
             </StackPanel>
         </Grid>
     </Grid>

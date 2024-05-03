@@ -161,7 +161,7 @@ namespace KyberBrowser {
             string serverName = name ?? NameTextBox.Text.Trim();
 
             if (String.IsNullOrWhiteSpace(serverName)) {
-                MessageBoxDialog.Show("The Server must have a name", this.Title, MessageBoxButton.OK, DialogSound.Error);
+                MessageBoxDialog.Show("У сервера должно быть имя", this.Title, MessageBoxButton.OK, DialogSound.Error);
                 return false;
             }
 
@@ -187,7 +187,7 @@ namespace KyberBrowser {
                     return await CreateServer(serverName + " ");
                 }
 
-                MessageBoxDialog.Show("Unable To Create Server:\n" + message, this.Title, MessageBoxButton.OK, DialogSound.Error);
+                MessageBoxDialog.Show("Невозможно создать сервер:\n" + message, this.Title, MessageBoxButton.OK, DialogSound.Error);
                 return false;
             }
             return true;

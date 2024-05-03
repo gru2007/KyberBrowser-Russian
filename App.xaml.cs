@@ -98,7 +98,7 @@ namespace KyberBrowser {
             if (!File.Exists(Config.Settings.BF2Path)) {
                 if (!FindBattlefrontPath()) {
                     _ = Current.Dispatcher.BeginInvoke(() => {
-                        MessageBoxDialog.Show("Unable To Locate STAR WARS Battlefront II", "KyberBrowser", MessageBoxButton.OK, DialogSound.Error);
+                        MessageBoxDialog.Show("Невозможно найти STAR WARS Battlefront II", "KyberBrowser", MessageBoxButton.OK, DialogSound.Error);
                         new SettingsWindow().ShowDialog();
                         Config.Save();
                     });
@@ -106,7 +106,7 @@ namespace KyberBrowser {
             }
 
             if (Config.Settings.UpdateChecker)
-                await GitHub.CheckAndInstall("Dyvinia", "KyberBrowser");
+                await GitHub.CheckAndInstall("gru2007", "KyberBrowser-Russian");
         }
 
         private void Application_DispatcherUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e) {
@@ -123,7 +123,7 @@ namespace KyberBrowser {
                 }
             }
             catch (Exception e) {
-                ExceptionDialog.Show(e, "KyberBrowser", false, "Unable to download Kyber:");
+                ExceptionDialog.Show(e, "KyberBrowser", false, "Невозможно скачать Kyber:");
                 Config.Settings.KyberChannel = "stable";
                 Config.Save();
             }
@@ -183,7 +183,7 @@ namespace KyberBrowser {
             }
             catch (Exception e) {
                 Task.Run(new Action(() => {
-                    ExceptionDialog.Show(e, "KyberBrowser", false, "Unable to load MapsModes.json: Reverting file.\nNOTE: The file will not be reverted until this window is closed.\n\nException:");
+                    ExceptionDialog.Show(e, "KyberBrowser", false, "Невозможно загрузить MapsModes.json: Возврат файла.\nВНИМАНИЕ: Файл не будет откачен, до того как окно закроется.\n\nException:");
                     File.WriteAllText(mapsModesPath, new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("KyberBrowser.Resources.MapsModes.json")).ReadToEnd());
                     Environment.Exit(0);
                 }));

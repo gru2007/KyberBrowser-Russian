@@ -28,7 +28,7 @@
             </Grid.RowDefinitions>
             <Border Grid.Row="1" Padding="6 2" Margin="6 0">
                 <StackPanel>
-                    <TextBlock x:Name="Header" Text="Update" FontSize="24" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" Margin="0 0 0 2"/>
+                    <TextBlock x:Name="Header" Text="Обновление" FontSize="24" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" Margin="0 0 0 2"/>
                     <Border BorderThickness="1" BorderBrush="{StaticResource ContainerBorder}">
                         <WebBrowser x:Name="Browser" Visibility="Hidden" RenderOptions.BitmapScalingMode="Fant" TextOptions.TextRenderingMode="ClearType" Navigating="Browser_Navigating" LoadCompleted="Browser_LoadCompleted" Height="200"/>
                     </Border>
@@ -36,9 +36,9 @@
             </Border>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="2" Margin="7 0">
-                <Button x:Name="InstallButton" Content="Install Update" Width="110" HorizontalAlignment="Right" Margin="0,5,5,5" FontSize="15" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" />
-                <Button x:Name="WebpageButton" Content="Open GitHub" Width="100" HorizontalAlignment="Right" Margin="0,5,5,5" FontSize="15" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" />
-                <Button x:Name="IgnoreButton" Content="Ignore" Width="70" HorizontalAlignment="Right" Margin="0,5,5,5" FontSize="15" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" />
+                <Button x:Name="InstallButton" Content="Установить" Width="101" Margin="0,5,5,5" FontSize="15" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" />
+                <Button x:Name="WebpageButton" Content="GitHub" Width="100" HorizontalAlignment="Right" Margin="0,5,5,5" FontSize="15" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" />
+                <Button x:Name="IgnoreButton" Content="Игнорировать" Width="97" Margin="0,5,5,5" FontSize="15" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" />
             </StackPanel>
         </Grid>
     </Grid>

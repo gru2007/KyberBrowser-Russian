@@ -25,7 +25,7 @@
             <Border Grid.Column="2" Background="#DD000000" BorderThickness="1" BorderBrush="{DynamicResource ControlDefaultBorderBrush}" Padding="1" SnapsToDevicePixels="True" Margin="0 00 0 0">
                 <Grid Margin="12 8 12 12" >
                     <StackPanel Orientation="Vertical">
-                        <TextBlock Text="Create &amp; Host Server" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="28" TextWrapping="NoWrap"/>
+                        <TextBlock Text="Создать сервер" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="28" TextWrapping="NoWrap"/>
                         <Separator Margin="-1 2 -1 8"/>
 
                         <Grid>
@@ -36,17 +36,17 @@
                             </Grid.ColumnDefinitions>
 
                             <StackPanel Grid.Column="0" Orientation="Vertical">
-                                <TextBlock Text="Name:" FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT" FontSize="15" Foreground="#FFA3A3A3" TextWrapping="Wrap"/>
+                                <TextBlock Text="Имя:" FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT" FontSize="15" Foreground="#FFA3A3A3" TextWrapping="Wrap"/>
                                 <TextBox x:Name="NameTextBox" Margin="0 2 0 4" Padding="2 0 0 0" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="16" BorderThickness="1" Height="30" ScrollViewer.VerticalScrollBarVisibility="Hidden" VerticalContentAlignment="Center"/>
                             </StackPanel>
 
                             <StackPanel Grid.Column="2" Orientation="Vertical">
-                                <TextBlock Text="Password:" FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT" FontSize="15" Foreground="#FFA3A3A3" TextWrapping="Wrap"/>
+                                <TextBlock Text="Пароль:" FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT" FontSize="15" Foreground="#FFA3A3A3" TextWrapping="Wrap"/>
 
                                 <Grid Margin="0 2 0 4" Height="30" >
                                     <TextBox x:Name="PassTextBox" Padding="2 0 0 0" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="16" BorderThickness="1" ScrollViewer.VerticalScrollBarVisibility="Hidden" VerticalContentAlignment="Center"/>
 
-                                    <TextBlock IsHitTestVisible="False" Text="Optional" VerticalAlignment="Center" HorizontalAlignment="Left" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="16" Margin="4,0,0,0" Opacity="0.25">
+                                    <TextBlock IsHitTestVisible="False" Text="Необязательно" VerticalAlignment="Center" HorizontalAlignment="Left" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="16" Margin="4,0,0,0" Opacity="0.25">
                                         <TextBlock.Style>
                                             <Style TargetType="{x:Type TextBlock}">
                                                 <Setter Property="Visibility" Value="Collapsed"/>
@@ -63,13 +63,13 @@
                         </Grid>
 
                         <StackPanel Orientation="Vertical" Margin="0 2 0 0">
-                            <TextBlock Text="Description:" FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT" FontSize="15" Foreground="#FFA3A3A3" TextWrapping="Wrap"/>
+                            <TextBlock Text="Описание:" FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT" FontSize="15" Foreground="#FFA3A3A3" TextWrapping="Wrap"/>
                             <Grid Margin="0 2 0 4" Height="55">
                                 <TextBox x:Name="DescTextBox" Padding="2 2 0 0" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="16" BorderThickness="1" VerticalContentAlignment="Top" TextWrapping="Wrap" AcceptsReturn="True" MaxLength="128" TextChanged="DescTextBox_TextChanged" LostFocus="DescTextBox_LostFocus"/>
 
                                 <TextBlock x:Name="DescTextBoxCounter" IsHitTestVisible="False" Text="0/128" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="14" Margin="0,0,4,2" Opacity="0.5"/>
                                 
-                                <TextBlock IsHitTestVisible="False" Text="Optional" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="16" Margin="4,4,0,0" Opacity="0.25">
+                                <TextBlock IsHitTestVisible="False" Text="Необязательно" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="16" Margin="4,4,0,0" Opacity="0.25">
                                     <TextBlock.Style>
                                         <Style TargetType="{x:Type TextBlock}">
                                             <Setter Property="Visibility" Value="Collapsed"/>
@@ -85,7 +85,7 @@
                         </StackPanel>
 
                         <StackPanel Orientation="Vertical" Margin="0 2 0 0">
-                            <TextBlock Text="Ping Site:" FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT" FontSize="15" Foreground="#FFA3A3A3" TextWrapping="Wrap"/>
+                            <TextBlock Text="Пинг-Сайт:" FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT" FontSize="15" Foreground="#FFA3A3A3" TextWrapping="Wrap"/>
                             <ComboBox x:Name="PingSiteComboBox" DisplayMemberPath="NameInfo" Margin="0 2 0 4" ToolTip="Select Ping Site&#x0a;Press F5 to refresh list" Height="30" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" Padding="6 0 0 0" FontSize="16" VerticalContentAlignment="Center" Foreground="#FFA3A3A3"/>
                         </StackPanel>
 
@@ -98,22 +98,22 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             <StackPanel Orientation="Vertical">
-                                <TextBlock Text="Mode:" FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT" FontSize="15" Foreground="#FFA3A3A3" TextWrapping="Wrap"/>
+                                <TextBlock Text="Режим:" FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT" FontSize="15" Foreground="#FFA3A3A3" TextWrapping="Wrap"/>
                                 <ComboBox x:Name="ModeComboBox" DisplayMemberPath="Value.Name" SelectionChanged="ModeComboBox_SelectionChanged" Margin="0 2 0 4" ToolTip="Select Gamemode" Height="30" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" Padding="6 0 0 0" FontSize="16" VerticalContentAlignment="Center" Foreground="#FFA3A3A3"/>
                             </StackPanel>
 
                             <StackPanel Grid.Column="2" Orientation="Vertical">
-                                <TextBlock Text="Map:" FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT" FontSize="15" Foreground="#FFA3A3A3" TextWrapping="Wrap"/>
+                                <TextBlock Text="Карта:" FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT" FontSize="15" Foreground="#FFA3A3A3" TextWrapping="Wrap"/>
                                 <ComboBox x:Name="MapComboBox" DisplayMemberPath="Value" Margin="0 2 0 4" ToolTip="Select Map" Height="30" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" Padding="6 0 0 0" FontSize="16" VerticalContentAlignment="Center" Foreground="#FFA3A3A3"/>
                             </StackPanel>
                         </Grid>
 
                         <StackPanel Margin="0 2 0 0" Orientation="Vertical">
-                            <TextBlock Text="Max Players:" FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT" FontSize="15" Foreground="#FFA3A3A3" TextWrapping="Wrap"/>
+                            <TextBlock Text="Максимальное число игроков:" FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT" FontSize="15" Foreground="#FFA3A3A3" TextWrapping="Wrap"/>
                             <TextBox x:Name="MaxPlayersTextBox" Margin="0 2 0 4" Padding="2 0 0 0" Text="40" PreviewTextInput="MaxPlayersTextBox_PreviewTextInput" LostFocus="MaxPlayersTextBox_LostFocus" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="16" BorderThickness="1" Height="30" VerticalContentAlignment="Center"/>
                         </StackPanel>
 
-                        <TextBlock Text="Host Faction:" Margin="0 2 0 0" FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT" FontSize="15" Foreground="#FFA3A3A3" TextWrapping="Wrap"/>
+                        <TextBlock Text="Сторона хоста:" Margin="0 2 0 0" FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT" FontSize="15" Foreground="#FFA3A3A3" TextWrapping="Wrap"/>
                         <Border Background="#bb000000" BorderThickness="1" BorderBrush="#6fffffff">
                             <Grid Margin="4" Height="24">
                                 <Grid.ColumnDefinitions>
@@ -121,13 +121,13 @@
                                     <ColumnDefinition Width="4"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
-                                <RadioButton x:Name="LightFactionRadio" Grid.Column="0" Content="Light" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="16" IsChecked="True"/>
-                                <RadioButton Grid.Column="2" Content="Dark" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="16"/>
+                                <RadioButton x:Name="LightFactionRadio" Grid.Column="0" Content="Светлая" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="16" IsChecked="True"/>
+                                <RadioButton Grid.Column="2" Content="Тёмная" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="16"/>
                             </Grid>
                         </Border>
                         
                         <CheckBox x:Name="AutoBalanceCheckbox" VerticalAlignment="Center" Margin="0,8,0,0" IsChecked="True">
-                            <TextBlock Text="Auto Balance Teams" Margin="-4,0" FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT" FontSize="15" Foreground="#FFA3A3A3"  TextAlignment="Left"/>
+                            <TextBlock Text="Авто-баланс команд" Margin="-4,0" FontFamily="/Fonts/NewsGothBT.ttf #NewsGoth BT" FontSize="15" Foreground="#FFA3A3A3"  TextAlignment="Left"/>
                         </CheckBox>
 
                         <Separator Margin="-1 8 -1 8"/>
@@ -159,7 +159,7 @@
                                     </Image>
                                 </Button.Content>
                             </Button>
-                            <Button Grid.Column="2" Content="PLAY" ToolTip="Launch Game" Height="40" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="18" Click="LaunchButton_Click"/>
+                            <Button Grid.Column="2" Content="ИГРАТЬ" ToolTip="Launch Game" Height="40" FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="18" Click="LaunchButton_Click"/>
                             <Button Grid.Column="4" x:Name="LaunchFrostyButton" ToolTip="Select Server and Launch Frosty" Height="40" Click="LaunchFrostyButton_Click"  FontFamily="/Fonts/Univers.ttf #Linotype Univers 520 CnMedium" FontSize="14">
                                 <Button.Content>
                                     <Path Stretch="Uniform" Margin="4"
